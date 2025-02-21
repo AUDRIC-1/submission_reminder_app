@@ -44,15 +44,15 @@ chmod +x "$mainDir/scripts/functions.sh"
 # Populate submissions.txt with sample data
 cat <<EOL > "$mainDir/data/submissions.txt"
 # Student Submission Records
-John Doe, 2025-02-20
-Jane Smith, 2025-02-21
-Alice Johnson, 2025-02-22
-Bob Brown, 2025-02-23
-Charlie White, 2025-02-24
-Michael Green, 2025-02-25
-Emma Wilson, 2025-02-26
-Noah Carter, 2025-02-27
-Olivia Brown, 2025-02-28
+Rubibi Julia, 2025-02-20
+Ndahiro Honore, 2025-02-21
+Ganza Reis, 2025-02-22
+Mwiza Gadiela, 2025-02-23
+Hirwa Darcy, 2025-02-24
+Mugisha Yvan, 2025-02-25
+Muhire Ken, 2025-02-26
+Noah Mello, 2025-02-27
+Olivia Rodrigo, 2025-02-28
 EOL
 
 # Implement startup.sh
