@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Ask the user for their name
+# Prompt the user for their name
 read -p "Enter your name: " userName
 
-# Define main directory
-:mainDir="submission_reminder_${userName}"
+# Define the main directory name using the user's input
+mainDir="submission_reminder_${userName}"
 
-# Create main directory
+# Create the required directories
 mkdir -p "$mainDir/scripts" "$mainDir/config" "$mainDir/data"
 
-# Create required files
+# Create the required files
 touch "$mainDir/scripts/reminder.sh"
 touch "$mainDir/scripts/functions.sh"
 touch "$mainDir/scripts/startup.sh"
@@ -41,21 +41,17 @@ function notify_users() {
 EOL
 chmod +x "$mainDir/scripts/functions.sh"
 
-# Populate submissions.txt with sample data
+# Populate submissions.txt with sample records (using "Submitted" or "Not Submitted")
 cat <<EOL > "$mainDir/data/submissions.txt"
 # Student Submission Records
-Rubibi Julia, 2025-02-20
-Ndahiro Honore, 2025-02-21
-Ganza Reis, 2025-02-22
-Mwiza Gadiela, 2025-02-23
-Hirwa Darcy, 2025-02-24
-Mugisha Yvan, 2025-02-25
-Muhire Ken, 2025-02-26
-Noah Mello, 2025-02-27
-Olivia Rodrigo, 2025-02-28
+John Legend, Submitted
+Will Smith, Not Submitted
+Dwayne Johnson, Submitted
+Chris Brown, Not Submitted
+Charlie Puth, Submitted
 EOL
 
-# Implement startup.sh
+# Populate startup.sh
 cat <<EOL > "$mainDir/scripts/startup.sh"
 #!/bin/bash
 echo "Starting Submission Reminder App..."
@@ -63,5 +59,6 @@ bash "\$(dirname "\$0")/reminder.sh"
 EOL
 chmod +x "$mainDir/scripts/startup.sh"
 
-echo "Environment setup complete!"
+# Display a success message
+echo "Environment setup complete! Your application is ready in: $mainDir"
 
